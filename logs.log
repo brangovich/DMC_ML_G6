@@ -1040,3 +1040,1252 @@ Alternately, you can install this by running `pip install pycaret[models]`
                 ('normalize', TransformerWrapper(transformer=StandardScaler())),
                 ('trained_model', LinearRegression(n_jobs=-1))])
 2025-05-12 21:59:35,446:INFO:save_model() successfully completed......................................
+2025-05-14 18:07:47,768:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-14 18:07:47,773:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-14 18:07:47,773:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-14 18:07:47,773:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-05-14 18:08:25,055:INFO:PyCaret ClassificationExperiment
+2025-05-14 18:08:25,055:INFO:Logging name: clf-default-name
+2025-05-14 18:08:25,055:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-05-14 18:08:25,055:INFO:version 3.3.2
+2025-05-14 18:08:25,055:INFO:Initializing setup()
+2025-05-14 18:08:25,055:INFO:self.USI: a58b
+2025-05-14 18:08:25,055:INFO:self._variable_keys: {'exp_id', 'X_train', 'fold_shuffle_param', 'target_param', 'n_jobs_param', 'log_plots_param', 'seed', 'fold_groups_param', 'fold_generator', 'html_param', 'pipeline', 'y', 'y_train', 'is_multiclass', 'exp_name_log', 'gpu_n_jobs_param', 'X_test', 'gpu_param', 'y_test', 'data', '_ml_usecase', 'fix_imbalance', 'idx', 'memory', 'USI', '_available_plots', 'X', 'logging_param'}
+2025-05-14 18:08:25,055:INFO:Checking environment
+2025-05-14 18:08:25,055:INFO:python_version: 3.11.0
+2025-05-14 18:08:25,056:INFO:python_build: ('main', 'Oct 24 2022 18:26:48')
+2025-05-14 18:08:25,056:INFO:machine: AMD64
+2025-05-14 18:08:25,056:INFO:platform: Windows-10-10.0.26100-SP0
+2025-05-14 18:08:25,063:INFO:Memory: svmem(total=102695145472, available=83419549696, percent=18.8, used=19275595776, free=83419549696)
+2025-05-14 18:08:25,063:INFO:Physical Core: 16
+2025-05-14 18:08:25,063:INFO:Logical Core: 32
+2025-05-14 18:08:25,063:INFO:Checking libraries
+2025-05-14 18:08:25,063:INFO:System:
+2025-05-14 18:08:25,063:INFO:    python: 3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]
+2025-05-14 18:08:25,063:INFO:executable: c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\python.exe
+2025-05-14 18:08:25,063:INFO:   machine: Windows-10-10.0.26100-SP0
+2025-05-14 18:08:25,063:INFO:PyCaret required dependencies:
+2025-05-14 18:08:25,124:INFO:                 pip: 22.3
+2025-05-14 18:08:25,124:INFO:          setuptools: 65.5.0
+2025-05-14 18:08:25,124:INFO:             pycaret: 3.3.2
+2025-05-14 18:08:25,124:INFO:             IPython: 9.1.0
+2025-05-14 18:08:25,124:INFO:          ipywidgets: 8.1.7
+2025-05-14 18:08:25,124:INFO:                tqdm: 4.67.1
+2025-05-14 18:08:25,124:INFO:               numpy: 1.26.4
+2025-05-14 18:08:25,124:INFO:              pandas: 2.1.4
+2025-05-14 18:08:25,124:INFO:              jinja2: 3.1.6
+2025-05-14 18:08:25,124:INFO:               scipy: 1.11.4
+2025-05-14 18:08:25,124:INFO:              joblib: 1.3.2
+2025-05-14 18:08:25,124:INFO:             sklearn: 1.4.2
+2025-05-14 18:08:25,124:INFO:                pyod: 2.0.5
+2025-05-14 18:08:25,124:INFO:            imblearn: 0.13.0
+2025-05-14 18:08:25,124:INFO:   category_encoders: 2.7.0
+2025-05-14 18:08:25,124:INFO:            lightgbm: 4.6.0
+2025-05-14 18:08:25,124:INFO:               numba: 0.61.2
+2025-05-14 18:08:25,124:INFO:            requests: 2.32.3
+2025-05-14 18:08:25,124:INFO:          matplotlib: 3.7.5
+2025-05-14 18:08:25,124:INFO:          scikitplot: 0.3.7
+2025-05-14 18:08:25,124:INFO:         yellowbrick: 1.5
+2025-05-14 18:08:25,124:INFO:              plotly: 5.24.1
+2025-05-14 18:08:25,124:INFO:    plotly-resampler: Not installed
+2025-05-14 18:08:25,124:INFO:             kaleido: 0.2.1
+2025-05-14 18:08:25,125:INFO:           schemdraw: 0.15
+2025-05-14 18:08:25,125:INFO:         statsmodels: 0.14.4
+2025-05-14 18:08:25,125:INFO:              sktime: 0.26.0
+2025-05-14 18:08:25,125:INFO:               tbats: 1.1.3
+2025-05-14 18:08:25,125:INFO:            pmdarima: 2.0.4
+2025-05-14 18:08:25,125:INFO:              psutil: 7.0.0
+2025-05-14 18:08:25,125:INFO:          markupsafe: 3.0.2
+2025-05-14 18:08:25,125:INFO:             pickle5: Not installed
+2025-05-14 18:08:25,125:INFO:         cloudpickle: 3.1.1
+2025-05-14 18:08:25,125:INFO:         deprecation: 2.1.0
+2025-05-14 18:08:25,125:INFO:              xxhash: 3.5.0
+2025-05-14 18:08:25,125:INFO:           wurlitzer: Not installed
+2025-05-14 18:08:25,125:INFO:PyCaret optional dependencies:
+2025-05-14 18:08:25,131:INFO:                shap: Not installed
+2025-05-14 18:08:25,131:INFO:           interpret: Not installed
+2025-05-14 18:08:25,131:INFO:                umap: Not installed
+2025-05-14 18:08:25,131:INFO:     ydata_profiling: Not installed
+2025-05-14 18:08:25,131:INFO:  explainerdashboard: Not installed
+2025-05-14 18:08:25,131:INFO:             autoviz: Not installed
+2025-05-14 18:08:25,131:INFO:           fairlearn: Not installed
+2025-05-14 18:08:25,131:INFO:          deepchecks: Not installed
+2025-05-14 18:08:25,131:INFO:             xgboost: Not installed
+2025-05-14 18:08:25,131:INFO:            catboost: Not installed
+2025-05-14 18:08:25,131:INFO:              kmodes: Not installed
+2025-05-14 18:08:25,131:INFO:             mlxtend: Not installed
+2025-05-14 18:08:25,131:INFO:       statsforecast: Not installed
+2025-05-14 18:08:25,131:INFO:        tune_sklearn: Not installed
+2025-05-14 18:08:25,131:INFO:                 ray: Not installed
+2025-05-14 18:08:25,131:INFO:            hyperopt: Not installed
+2025-05-14 18:08:25,131:INFO:              optuna: Not installed
+2025-05-14 18:08:25,131:INFO:               skopt: Not installed
+2025-05-14 18:08:25,131:INFO:              mlflow: Not installed
+2025-05-14 18:08:25,131:INFO:              gradio: Not installed
+2025-05-14 18:08:25,131:INFO:             fastapi: Not installed
+2025-05-14 18:08:25,131:INFO:             uvicorn: Not installed
+2025-05-14 18:08:25,131:INFO:              m2cgen: Not installed
+2025-05-14 18:08:25,131:INFO:           evidently: Not installed
+2025-05-14 18:08:25,131:INFO:               fugue: Not installed
+2025-05-14 18:08:25,131:INFO:           streamlit: Not installed
+2025-05-14 18:08:25,131:INFO:             prophet: Not installed
+2025-05-14 18:08:25,131:INFO:None
+2025-05-14 18:08:25,131:INFO:Set up data.
+2025-05-14 18:08:25,138:INFO:Set up folding strategy.
+2025-05-14 18:08:25,138:INFO:Set up train/test split.
+2025-05-14 18:08:25,157:INFO:Set up index.
+2025-05-14 18:08:25,157:INFO:Assigning column types.
+2025-05-14 18:08:25,159:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-05-14 18:08:25,177:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-05-14 18:08:25,181:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-14 18:08:25,200:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,201:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,219:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-05-14 18:08:25,219:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-14 18:08:25,231:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,231:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,231:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-05-14 18:08:25,250:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-14 18:08:25,261:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,261:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,280:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-05-14 18:08:25,291:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,292:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,292:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-05-14 18:08:25,322:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,322:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,353:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,353:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,354:INFO:Preparing preprocessing pipeline...
+2025-05-14 18:08:25,355:INFO:Set up simple imputation.
+2025-05-14 18:08:25,356:INFO:Set up encoding of categorical features.
+2025-05-14 18:08:25,356:INFO:Set up feature normalization.
+2025-05-14 18:08:25,386:INFO:Finished creating preprocessing pipeline.
+2025-05-14 18:08:25,390:INFO:Pipeline: Pipeline(memory=FastMemory(location=C:\Users\BRANGO~1\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['edad', 'ingresos_mensuales',
+                                             'nro_creditos_previos',
+                                             'cuota_vs_ingreso',
+                                             'vehiculo_propio'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_value...
+                                    include=['estado_civil',
+                                             'historia_credito'],
+                                    transformer=OneHotEncoder(cols=['estado_civil',
+                                                                    'historia_credito'],
+                                                              drop_invariant=False,
+                                                              handle_missing='return_nan',
+                                                              handle_unknown='value',
+                                                              return_df=True,
+                                                              use_cat_names=True,
+                                                              verbose=0))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False)
+2025-05-14 18:08:25,390:INFO:Creating final display dataframe.
+2025-05-14 18:08:25,461:INFO:Setup _display_container:                     Description             Value
+0                    Session id                42
+1                        Target           default
+2                   Target type            Binary
+3           Original data shape          (150, 8)
+4        Transformed data shape         (150, 12)
+5   Transformed train set shape         (105, 12)
+6    Transformed test set shape          (45, 12)
+7              Numeric features                 5
+8          Categorical features                 2
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15                    Normalize              True
+16             Normalize method            zscore
+17               Fold Generator   StratifiedKFold
+18                  Fold Number                10
+19                     CPU Jobs                -1
+20                      Use GPU             False
+21               Log Experiment             False
+22              Experiment Name  clf-default-name
+23                          USI              a58b
+2025-05-14 18:08:25,495:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,495:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,526:WARNING:
+'xgboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install xgboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,526:WARNING:
+'catboost' is a soft dependency and not included in the pycaret installation. Please run: `pip install catboost` to install.
+Alternately, you can install this by running `pip install pycaret[models]`
+2025-05-14 18:08:25,527:INFO:setup() successfully completed in 0.47s...............
+2025-05-14 18:08:32,804:INFO:Initializing compare_models()
+2025-05-14 18:08:32,804:INFO:compare_models(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, include=None, exclude=None, fold=None, round=4, cross_validation=True, sort=Accuracy, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, experiment_custom_tags=None, probability_threshold=None, verbose=True, parallel=None, caller_params={'self': <pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, 'include': None, 'exclude': None, 'fold': None, 'round': 4, 'cross_validation': True, 'sort': 'Accuracy', 'n_select': 1, 'budget_time': None, 'turbo': True, 'errors': 'ignore', 'fit_kwargs': None, 'groups': None, 'experiment_custom_tags': None, 'probability_threshold': None, 'engine': None, 'verbose': True, 'parallel': None, '__class__': <class 'pycaret.classification.oop.ClassificationExperiment'>})
+2025-05-14 18:08:32,804:INFO:Checking exceptions
+2025-05-14 18:08:32,806:INFO:Preparing display monitor
+2025-05-14 18:08:32,821:INFO:Initializing Logistic Regression
+2025-05-14 18:08:32,821:INFO:Total runtime is 0.0 minutes
+2025-05-14 18:08:32,823:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:32,824:INFO:Initializing create_model()
+2025-05-14 18:08:32,824:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:32,824:INFO:Checking exceptions
+2025-05-14 18:08:32,824:INFO:Importing libraries
+2025-05-14 18:08:32,824:INFO:Copying training dataset
+2025-05-14 18:08:32,826:INFO:Defining folds
+2025-05-14 18:08:32,826:INFO:Declaring metric variables
+2025-05-14 18:08:32,827:INFO:Importing untrained model
+2025-05-14 18:08:32,829:INFO:Logistic Regression Imported successfully
+2025-05-14 18:08:32,832:INFO:Starting cross validation
+2025-05-14 18:08:32,833:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:34,447:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:34,464:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:34,465:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:34,466:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:34,476:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:34,485:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:34,485:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:34,491:INFO:Calculating mean and std
+2025-05-14 18:08:34,492:INFO:Creating metrics dataframe
+2025-05-14 18:08:34,493:INFO:Uploading results into container
+2025-05-14 18:08:34,494:INFO:Uploading model into container now
+2025-05-14 18:08:34,494:INFO:_master_model_container: 1
+2025-05-14 18:08:34,494:INFO:_display_container: 2
+2025-05-14 18:08:34,494:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=42, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-05-14 18:08:34,494:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:34,570:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:34,570:INFO:Creating metrics dataframe
+2025-05-14 18:08:34,572:INFO:Initializing K Neighbors Classifier
+2025-05-14 18:08:34,574:INFO:Total runtime is 0.029200295607248943 minutes
+2025-05-14 18:08:34,574:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:34,574:INFO:Initializing create_model()
+2025-05-14 18:08:34,574:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=knn, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:34,574:INFO:Checking exceptions
+2025-05-14 18:08:34,574:INFO:Importing libraries
+2025-05-14 18:08:34,574:INFO:Copying training dataset
+2025-05-14 18:08:34,575:INFO:Defining folds
+2025-05-14 18:08:34,575:INFO:Declaring metric variables
+2025-05-14 18:08:34,577:INFO:Importing untrained model
+2025-05-14 18:08:34,578:INFO:K Neighbors Classifier Imported successfully
+2025-05-14 18:08:34,580:INFO:Starting cross validation
+2025-05-14 18:08:34,581:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:35,840:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:35,853:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:35,857:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:35,872:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:35,874:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:35,891:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:35,892:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:35,899:INFO:Calculating mean and std
+2025-05-14 18:08:35,899:INFO:Creating metrics dataframe
+2025-05-14 18:08:35,902:INFO:Uploading results into container
+2025-05-14 18:08:35,902:INFO:Uploading model into container now
+2025-05-14 18:08:35,902:INFO:_master_model_container: 2
+2025-05-14 18:08:35,903:INFO:_display_container: 2
+2025-05-14 18:08:35,903:INFO:KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+                     weights='uniform')
+2025-05-14 18:08:35,903:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:35,971:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:35,971:INFO:Creating metrics dataframe
+2025-05-14 18:08:35,974:INFO:Initializing Naive Bayes
+2025-05-14 18:08:35,974:INFO:Total runtime is 0.05253420273462932 minutes
+2025-05-14 18:08:35,976:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:35,976:INFO:Initializing create_model()
+2025-05-14 18:08:35,976:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=nb, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:35,976:INFO:Checking exceptions
+2025-05-14 18:08:35,976:INFO:Importing libraries
+2025-05-14 18:08:35,976:INFO:Copying training dataset
+2025-05-14 18:08:35,977:INFO:Defining folds
+2025-05-14 18:08:35,977:INFO:Declaring metric variables
+2025-05-14 18:08:35,978:INFO:Importing untrained model
+2025-05-14 18:08:35,980:INFO:Naive Bayes Imported successfully
+2025-05-14 18:08:35,982:INFO:Starting cross validation
+2025-05-14 18:08:35,983:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:37,206:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:37,211:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:37,230:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:37,237:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:37,238:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:37,250:INFO:Calculating mean and std
+2025-05-14 18:08:37,251:INFO:Creating metrics dataframe
+2025-05-14 18:08:37,252:INFO:Uploading results into container
+2025-05-14 18:08:37,252:INFO:Uploading model into container now
+2025-05-14 18:08:37,253:INFO:_master_model_container: 3
+2025-05-14 18:08:37,253:INFO:_display_container: 2
+2025-05-14 18:08:37,253:INFO:GaussianNB(priors=None, var_smoothing=1e-09)
+2025-05-14 18:08:37,253:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:37,328:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:37,328:INFO:Creating metrics dataframe
+2025-05-14 18:08:37,331:INFO:Initializing Decision Tree Classifier
+2025-05-14 18:08:37,331:INFO:Total runtime is 0.07516022920608521 minutes
+2025-05-14 18:08:37,332:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:37,332:INFO:Initializing create_model()
+2025-05-14 18:08:37,332:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=dt, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:37,332:INFO:Checking exceptions
+2025-05-14 18:08:37,333:INFO:Importing libraries
+2025-05-14 18:08:37,333:INFO:Copying training dataset
+2025-05-14 18:08:37,334:INFO:Defining folds
+2025-05-14 18:08:37,334:INFO:Declaring metric variables
+2025-05-14 18:08:37,335:INFO:Importing untrained model
+2025-05-14 18:08:37,336:INFO:Decision Tree Classifier Imported successfully
+2025-05-14 18:08:37,338:INFO:Starting cross validation
+2025-05-14 18:08:37,339:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:37,370:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,349:INFO:Calculating mean and std
+2025-05-14 18:08:38,350:INFO:Creating metrics dataframe
+2025-05-14 18:08:38,351:INFO:Uploading results into container
+2025-05-14 18:08:38,351:INFO:Uploading model into container now
+2025-05-14 18:08:38,352:INFO:_master_model_container: 4
+2025-05-14 18:08:38,352:INFO:_display_container: 2
+2025-05-14 18:08:38,352:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, random_state=42, splitter='best')
+2025-05-14 18:08:38,352:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:38,414:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:38,414:INFO:Creating metrics dataframe
+2025-05-14 18:08:38,417:INFO:Initializing SVM - Linear Kernel
+2025-05-14 18:08:38,417:INFO:Total runtime is 0.09326629241307577 minutes
+2025-05-14 18:08:38,419:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:38,419:INFO:Initializing create_model()
+2025-05-14 18:08:38,419:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=svm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:38,419:INFO:Checking exceptions
+2025-05-14 18:08:38,419:INFO:Importing libraries
+2025-05-14 18:08:38,419:INFO:Copying training dataset
+2025-05-14 18:08:38,421:INFO:Defining folds
+2025-05-14 18:08:38,421:INFO:Declaring metric variables
+2025-05-14 18:08:38,422:INFO:Importing untrained model
+2025-05-14 18:08:38,423:INFO:SVM - Linear Kernel Imported successfully
+2025-05-14 18:08:38,425:INFO:Starting cross validation
+2025-05-14 18:08:38,426:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:38,456:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,456:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,462:INFO:Calculating mean and std
+2025-05-14 18:08:38,462:INFO:Creating metrics dataframe
+2025-05-14 18:08:38,463:INFO:Uploading results into container
+2025-05-14 18:08:38,464:INFO:Uploading model into container now
+2025-05-14 18:08:38,464:INFO:_master_model_container: 5
+2025-05-14 18:08:38,464:INFO:_display_container: 2
+2025-05-14 18:08:38,464:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=42, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2025-05-14 18:08:38,464:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:38,517:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:38,517:INFO:Creating metrics dataframe
+2025-05-14 18:08:38,520:INFO:Initializing Ridge Classifier
+2025-05-14 18:08:38,520:INFO:Total runtime is 0.09498353799184164 minutes
+2025-05-14 18:08:38,521:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:38,521:INFO:Initializing create_model()
+2025-05-14 18:08:38,522:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=ridge, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:38,522:INFO:Checking exceptions
+2025-05-14 18:08:38,522:INFO:Importing libraries
+2025-05-14 18:08:38,522:INFO:Copying training dataset
+2025-05-14 18:08:38,523:INFO:Defining folds
+2025-05-14 18:08:38,523:INFO:Declaring metric variables
+2025-05-14 18:08:38,524:INFO:Importing untrained model
+2025-05-14 18:08:38,525:INFO:Ridge Classifier Imported successfully
+2025-05-14 18:08:38,527:INFO:Starting cross validation
+2025-05-14 18:08:38,528:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:38,560:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,560:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,560:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,560:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,560:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,560:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,561:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,561:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,561:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,564:INFO:Calculating mean and std
+2025-05-14 18:08:38,565:INFO:Creating metrics dataframe
+2025-05-14 18:08:38,565:INFO:Uploading results into container
+2025-05-14 18:08:38,566:INFO:Uploading model into container now
+2025-05-14 18:08:38,566:INFO:_master_model_container: 6
+2025-05-14 18:08:38,566:INFO:_display_container: 2
+2025-05-14 18:08:38,566:INFO:RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=42, solver='auto',
+                tol=0.0001)
+2025-05-14 18:08:38,566:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:38,623:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:38,624:INFO:Creating metrics dataframe
+2025-05-14 18:08:38,627:INFO:Initializing Random Forest Classifier
+2025-05-14 18:08:38,627:INFO:Total runtime is 0.09675081570943198 minutes
+2025-05-14 18:08:38,628:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:38,628:INFO:Initializing create_model()
+2025-05-14 18:08:38,629:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:38,629:INFO:Checking exceptions
+2025-05-14 18:08:38,629:INFO:Importing libraries
+2025-05-14 18:08:38,629:INFO:Copying training dataset
+2025-05-14 18:08:38,630:INFO:Defining folds
+2025-05-14 18:08:38,630:INFO:Declaring metric variables
+2025-05-14 18:08:38,631:INFO:Importing untrained model
+2025-05-14 18:08:38,633:INFO:Random Forest Classifier Imported successfully
+2025-05-14 18:08:38,635:INFO:Starting cross validation
+2025-05-14 18:08:38,635:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:38,770:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,772:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,779:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,779:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,779:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,779:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,780:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,780:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,781:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:38,793:INFO:Calculating mean and std
+2025-05-14 18:08:38,794:INFO:Creating metrics dataframe
+2025-05-14 18:08:38,795:INFO:Uploading results into container
+2025-05-14 18:08:38,795:INFO:Uploading model into container now
+2025-05-14 18:08:38,796:INFO:_master_model_container: 7
+2025-05-14 18:08:38,796:INFO:_display_container: 2
+2025-05-14 18:08:38,796:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False)
+2025-05-14 18:08:38,796:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:38,854:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:38,854:INFO:Creating metrics dataframe
+2025-05-14 18:08:38,857:INFO:Initializing Quadratic Discriminant Analysis
+2025-05-14 18:08:38,857:INFO:Total runtime is 0.10058898131052654 minutes
+2025-05-14 18:08:38,859:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:38,859:INFO:Initializing create_model()
+2025-05-14 18:08:38,859:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=qda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:38,859:INFO:Checking exceptions
+2025-05-14 18:08:38,859:INFO:Importing libraries
+2025-05-14 18:08:38,859:INFO:Copying training dataset
+2025-05-14 18:08:38,860:INFO:Defining folds
+2025-05-14 18:08:38,860:INFO:Declaring metric variables
+2025-05-14 18:08:38,861:INFO:Importing untrained model
+2025-05-14 18:08:38,863:INFO:Quadratic Discriminant Analysis Imported successfully
+2025-05-14 18:08:38,865:INFO:Starting cross validation
+2025-05-14 18:08:38,866:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:38,903:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-05-14 18:08:38,903:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-05-14 18:08:38,903:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-05-14 18:08:38,903:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-05-14 18:08:38,903:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-05-14 18:08:38,903:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-05-14 18:08:38,903:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\discriminant_analysis.py:935: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+
+2025-05-14 18:08:38,921:INFO:Calculating mean and std
+2025-05-14 18:08:38,922:INFO:Creating metrics dataframe
+2025-05-14 18:08:38,923:INFO:Uploading results into container
+2025-05-14 18:08:38,923:INFO:Uploading model into container now
+2025-05-14 18:08:38,923:INFO:_master_model_container: 8
+2025-05-14 18:08:38,923:INFO:_display_container: 2
+2025-05-14 18:08:38,923:INFO:QuadraticDiscriminantAnalysis(priors=None, reg_param=0.0,
+                              store_covariance=False, tol=0.0001)
+2025-05-14 18:08:38,923:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:38,986:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:38,986:INFO:Creating metrics dataframe
+2025-05-14 18:08:38,990:INFO:Initializing Ada Boost Classifier
+2025-05-14 18:08:38,990:INFO:Total runtime is 0.10280437072118125 minutes
+2025-05-14 18:08:38,992:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:38,992:INFO:Initializing create_model()
+2025-05-14 18:08:38,992:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=ada, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:38,992:INFO:Checking exceptions
+2025-05-14 18:08:38,992:INFO:Importing libraries
+2025-05-14 18:08:38,992:INFO:Copying training dataset
+2025-05-14 18:08:38,993:INFO:Defining folds
+2025-05-14 18:08:38,993:INFO:Declaring metric variables
+2025-05-14 18:08:38,994:INFO:Importing untrained model
+2025-05-14 18:08:38,996:INFO:Ada Boost Classifier Imported successfully
+2025-05-14 18:08:38,998:INFO:Starting cross validation
+2025-05-14 18:08:38,999:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:39,022:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-05-14 18:08:39,022:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-05-14 18:08:39,022:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-05-14 18:08:39,022:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-05-14 18:08:39,022:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-05-14 18:08:39,023:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\ensemble\_weight_boosting.py:519: FutureWarning: The SAMME.R algorithm (the default) is deprecated and will be removed in 1.6. Use the SAMME algorithm to circumvent this warning.
+  warnings.warn(
+
+2025-05-14 18:08:39,057:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,059:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,060:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,061:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,065:INFO:Calculating mean and std
+2025-05-14 18:08:39,066:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,067:INFO:Uploading results into container
+2025-05-14 18:08:39,067:INFO:Uploading model into container now
+2025-05-14 18:08:39,067:INFO:_master_model_container: 9
+2025-05-14 18:08:39,067:INFO:_display_container: 2
+2025-05-14 18:08:39,068:INFO:AdaBoostClassifier(algorithm='SAMME.R', estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=42)
+2025-05-14 18:08:39,068:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:39,127:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:39,127:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,131:INFO:Initializing Gradient Boosting Classifier
+2025-05-14 18:08:39,131:INFO:Total runtime is 0.10516485373179119 minutes
+2025-05-14 18:08:39,133:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:39,133:INFO:Initializing create_model()
+2025-05-14 18:08:39,133:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:39,133:INFO:Checking exceptions
+2025-05-14 18:08:39,133:INFO:Importing libraries
+2025-05-14 18:08:39,133:INFO:Copying training dataset
+2025-05-14 18:08:39,134:INFO:Defining folds
+2025-05-14 18:08:39,134:INFO:Declaring metric variables
+2025-05-14 18:08:39,135:INFO:Importing untrained model
+2025-05-14 18:08:39,137:INFO:Gradient Boosting Classifier Imported successfully
+2025-05-14 18:08:39,139:INFO:Starting cross validation
+2025-05-14 18:08:39,140:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:39,201:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,201:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,202:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,203:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,205:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,217:INFO:Calculating mean and std
+2025-05-14 18:08:39,217:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,218:INFO:Uploading results into container
+2025-05-14 18:08:39,219:INFO:Uploading model into container now
+2025-05-14 18:08:39,219:INFO:_master_model_container: 10
+2025-05-14 18:08:39,219:INFO:_display_container: 2
+2025-05-14 18:08:39,219:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='log_loss', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_samples_leaf=1,
+                           min_samples_split=2, min_weight_fraction_leaf=0.0,
+                           n_estimators=100, n_iter_no_change=None,
+                           random_state=42, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2025-05-14 18:08:39,219:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:39,283:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:39,284:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,287:INFO:Initializing Linear Discriminant Analysis
+2025-05-14 18:08:39,287:INFO:Total runtime is 0.10775437355041505 minutes
+2025-05-14 18:08:39,289:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:39,289:INFO:Initializing create_model()
+2025-05-14 18:08:39,289:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=lda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:39,289:INFO:Checking exceptions
+2025-05-14 18:08:39,289:INFO:Importing libraries
+2025-05-14 18:08:39,289:INFO:Copying training dataset
+2025-05-14 18:08:39,290:INFO:Defining folds
+2025-05-14 18:08:39,290:INFO:Declaring metric variables
+2025-05-14 18:08:39,291:INFO:Importing untrained model
+2025-05-14 18:08:39,292:INFO:Linear Discriminant Analysis Imported successfully
+2025-05-14 18:08:39,295:INFO:Starting cross validation
+2025-05-14 18:08:39,295:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:39,327:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,327:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,327:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,327:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,328:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,329:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,331:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,340:INFO:Calculating mean and std
+2025-05-14 18:08:39,341:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,341:INFO:Uploading results into container
+2025-05-14 18:08:39,342:INFO:Uploading model into container now
+2025-05-14 18:08:39,342:INFO:_master_model_container: 11
+2025-05-14 18:08:39,342:INFO:_display_container: 2
+2025-05-14 18:08:39,342:INFO:LinearDiscriminantAnalysis(covariance_estimator=None, n_components=None,
+                           priors=None, shrinkage=None, solver='svd',
+                           store_covariance=False, tol=0.0001)
+2025-05-14 18:08:39,342:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:39,406:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:39,406:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,410:INFO:Initializing Extra Trees Classifier
+2025-05-14 18:08:39,410:INFO:Total runtime is 0.10980776151021322 minutes
+2025-05-14 18:08:39,411:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:39,411:INFO:Initializing create_model()
+2025-05-14 18:08:39,411:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=et, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:39,411:INFO:Checking exceptions
+2025-05-14 18:08:39,411:INFO:Importing libraries
+2025-05-14 18:08:39,411:INFO:Copying training dataset
+2025-05-14 18:08:39,413:INFO:Defining folds
+2025-05-14 18:08:39,413:INFO:Declaring metric variables
+2025-05-14 18:08:39,414:INFO:Importing untrained model
+2025-05-14 18:08:39,415:INFO:Extra Trees Classifier Imported successfully
+2025-05-14 18:08:39,418:INFO:Starting cross validation
+2025-05-14 18:08:39,418:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:39,542:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,544:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,545:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,547:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,548:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,557:INFO:Calculating mean and std
+2025-05-14 18:08:39,558:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,559:INFO:Uploading results into container
+2025-05-14 18:08:39,559:INFO:Uploading model into container now
+2025-05-14 18:08:39,559:INFO:_master_model_container: 12
+2025-05-14 18:08:39,559:INFO:_display_container: 2
+2025-05-14 18:08:39,559:INFO:ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='sqrt',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_samples_leaf=1,
+                     min_samples_split=2, min_weight_fraction_leaf=0.0,
+                     monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=42, verbose=0,
+                     warm_start=False)
+2025-05-14 18:08:39,560:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:39,619:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:39,619:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,623:INFO:Initializing Light Gradient Boosting Machine
+2025-05-14 18:08:39,623:INFO:Total runtime is 0.11335148811340333 minutes
+2025-05-14 18:08:39,624:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:39,625:INFO:Initializing create_model()
+2025-05-14 18:08:39,625:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:39,625:INFO:Checking exceptions
+2025-05-14 18:08:39,625:INFO:Importing libraries
+2025-05-14 18:08:39,625:INFO:Copying training dataset
+2025-05-14 18:08:39,626:INFO:Defining folds
+2025-05-14 18:08:39,626:INFO:Declaring metric variables
+2025-05-14 18:08:39,627:INFO:Importing untrained model
+2025-05-14 18:08:39,628:INFO:Light Gradient Boosting Machine Imported successfully
+2025-05-14 18:08:39,631:INFO:Starting cross validation
+2025-05-14 18:08:39,631:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:39,756:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,757:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,757:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,766:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,768:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,783:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,788:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,792:INFO:Calculating mean and std
+2025-05-14 18:08:39,792:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,794:INFO:Uploading results into container
+2025-05-14 18:08:39,794:INFO:Uploading model into container now
+2025-05-14 18:08:39,795:INFO:_master_model_container: 13
+2025-05-14 18:08:39,795:INFO:_display_container: 2
+2025-05-14 18:08:39,795:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=42, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2025-05-14 18:08:39,795:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:39,847:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:39,847:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,854:INFO:Initializing Dummy Classifier
+2025-05-14 18:08:39,855:INFO:Total runtime is 0.11722501516342164 minutes
+2025-05-14 18:08:39,857:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:08:39,857:INFO:Initializing create_model()
+2025-05-14 18:08:39,857:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=dummy, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240D83C1690>, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:39,857:INFO:Checking exceptions
+2025-05-14 18:08:39,857:INFO:Importing libraries
+2025-05-14 18:08:39,857:INFO:Copying training dataset
+2025-05-14 18:08:39,860:INFO:Defining folds
+2025-05-14 18:08:39,860:INFO:Declaring metric variables
+2025-05-14 18:08:39,863:INFO:Importing untrained model
+2025-05-14 18:08:39,866:INFO:Dummy Classifier Imported successfully
+2025-05-14 18:08:39,871:INFO:Starting cross validation
+2025-05-14 18:08:39,872:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:39,909:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,912:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,914:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,915:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,915:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,916:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,917:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,917:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,917:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,920:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:39,924:INFO:Calculating mean and std
+2025-05-14 18:08:39,925:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,926:INFO:Uploading results into container
+2025-05-14 18:08:39,926:INFO:Uploading model into container now
+2025-05-14 18:08:39,926:INFO:_master_model_container: 14
+2025-05-14 18:08:39,927:INFO:_display_container: 2
+2025-05-14 18:08:39,927:INFO:DummyClassifier(constant=None, random_state=42, strategy='prior')
+2025-05-14 18:08:39,927:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:39,987:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:08:39,987:INFO:Creating metrics dataframe
+2025-05-14 18:08:39,992:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:339: FutureWarning: Styler.applymap has been deprecated. Use Styler.map instead.
+  .applymap(highlight_cols, subset=["TT (Sec)"])
+
+2025-05-14 18:08:39,995:INFO:Initializing create_model()
+2025-05-14 18:08:39,996:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=42, solver='auto',
+                tol=0.0001), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:39,996:INFO:Checking exceptions
+2025-05-14 18:08:39,996:INFO:Importing libraries
+2025-05-14 18:08:39,996:INFO:Copying training dataset
+2025-05-14 18:08:39,997:INFO:Defining folds
+2025-05-14 18:08:39,998:INFO:Declaring metric variables
+2025-05-14 18:08:39,998:INFO:Importing untrained model
+2025-05-14 18:08:39,998:INFO:Declaring custom model
+2025-05-14 18:08:39,998:INFO:Ridge Classifier Imported successfully
+2025-05-14 18:08:39,998:INFO:Cross validation set to False
+2025-05-14 18:08:39,998:INFO:Fitting Model
+2025-05-14 18:08:40,011:INFO:RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=42, solver='auto',
+                tol=0.0001)
+2025-05-14 18:08:40,011:INFO:create_model() successfully completed......................................
+2025-05-14 18:08:40,092:INFO:_master_model_container: 14
+2025-05-14 18:08:40,092:INFO:_display_container: 2
+2025-05-14 18:08:40,092:INFO:RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, positive=False, random_state=42, solver='auto',
+                tol=0.0001)
+2025-05-14 18:08:40,092:INFO:compare_models() successfully completed......................................
+2025-05-14 18:08:53,457:INFO:Initializing create_model()
+2025-05-14 18:08:53,457:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=rf, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:08:53,457:INFO:Checking exceptions
+2025-05-14 18:08:53,464:INFO:Importing libraries
+2025-05-14 18:08:53,464:INFO:Copying training dataset
+2025-05-14 18:08:53,465:INFO:Defining folds
+2025-05-14 18:08:53,465:INFO:Declaring metric variables
+2025-05-14 18:08:53,467:INFO:Importing untrained model
+2025-05-14 18:08:53,469:INFO:Random Forest Classifier Imported successfully
+2025-05-14 18:08:53,472:INFO:Starting cross validation
+2025-05-14 18:08:53,472:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:08:53,615:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:53,618:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:53,619:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:53,620:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:53,620:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:53,622:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:53,623:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:53,624:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:53,625:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:08:53,632:INFO:Calculating mean and std
+2025-05-14 18:08:53,632:INFO:Creating metrics dataframe
+2025-05-14 18:08:53,635:INFO:Finalizing model
+2025-05-14 18:08:53,712:INFO:Uploading results into container
+2025-05-14 18:08:53,713:INFO:Uploading model into container now
+2025-05-14 18:08:53,716:INFO:_master_model_container: 15
+2025-05-14 18:08:53,717:INFO:_display_container: 3
+2025-05-14 18:08:53,717:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False)
+2025-05-14 18:08:53,717:INFO:create_model() successfully completed......................................
+2025-05-14 18:09:02,672:INFO:Initializing tune_model()
+2025-05-14 18:09:02,672:INFO:tune_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False), fold=None, round=4, n_iter=10, custom_grid=None, optimize=Accuracy, custom_scorer=None, search_library=scikit-learn, search_algorithm=None, early_stopping=False, early_stopping_max_iters=10, choose_better=True, fit_kwargs=None, groups=None, return_tuner=False, verbose=True, tuner_verbose=True, return_train_score=False, kwargs={})
+2025-05-14 18:09:02,672:INFO:Checking exceptions
+2025-05-14 18:09:02,679:INFO:Copying training dataset
+2025-05-14 18:09:02,681:INFO:Checking base model
+2025-05-14 18:09:02,681:INFO:Base model : Random Forest Classifier
+2025-05-14 18:09:02,682:INFO:Declaring metric variables
+2025-05-14 18:09:02,685:INFO:Defining Hyperparameters
+2025-05-14 18:09:02,751:INFO:Tuning with n_jobs=-1
+2025-05-14 18:09:02,751:INFO:Initializing RandomizedSearchCV
+2025-05-14 18:09:03,715:INFO:best_params: {'actual_estimator__n_estimators': 230, 'actual_estimator__min_samples_split': 10, 'actual_estimator__min_samples_leaf': 6, 'actual_estimator__min_impurity_decrease': 0, 'actual_estimator__max_features': 'sqrt', 'actual_estimator__max_depth': 9, 'actual_estimator__criterion': 'entropy', 'actual_estimator__class_weight': {}, 'actual_estimator__bootstrap': True}
+2025-05-14 18:09:03,717:INFO:Hyperparameter search completed
+2025-05-14 18:09:03,717:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:09:03,718:INFO:Initializing create_model()
+2025-05-14 18:09:03,718:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=False, add_to_model_list=True, metrics=None, display=<pycaret.internal.display.display.CommonDisplay object at 0x00000240BCB489D0>, model_only=True, return_train_score=False, error_score=0.0, kwargs={'n_estimators': 230, 'min_samples_split': 10, 'min_samples_leaf': 6, 'min_impurity_decrease': 0, 'max_features': 'sqrt', 'max_depth': 9, 'criterion': 'entropy', 'class_weight': {}, 'bootstrap': True})
+2025-05-14 18:09:03,718:INFO:Checking exceptions
+2025-05-14 18:09:03,718:INFO:Importing libraries
+2025-05-14 18:09:03,718:INFO:Copying training dataset
+2025-05-14 18:09:03,718:INFO:Defining folds
+2025-05-14 18:09:03,718:INFO:Declaring metric variables
+2025-05-14 18:09:03,720:INFO:Importing untrained model
+2025-05-14 18:09:03,720:INFO:Declaring custom model
+2025-05-14 18:09:03,722:INFO:Random Forest Classifier Imported successfully
+2025-05-14 18:09:03,724:INFO:Starting cross validation
+2025-05-14 18:09:03,725:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:09:03,938:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:03,940:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:03,942:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:03,943:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:03,947:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:03,948:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:03,948:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:03,949:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:03,950:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:03,951:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:03,956:INFO:Calculating mean and std
+2025-05-14 18:09:03,957:INFO:Creating metrics dataframe
+2025-05-14 18:09:03,959:INFO:Finalizing model
+2025-05-14 18:09:04,099:INFO:Uploading results into container
+2025-05-14 18:09:04,100:INFO:Uploading model into container now
+2025-05-14 18:09:04,100:INFO:_master_model_container: 16
+2025-05-14 18:09:04,100:INFO:_display_container: 4
+2025-05-14 18:09:04,100:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight={},
+                       criterion='entropy', max_depth=9, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0, min_samples_leaf=6,
+                       min_samples_split=10, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=230, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False)
+2025-05-14 18:09:04,100:INFO:create_model() successfully completed......................................
+2025-05-14 18:09:04,169:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:09:04,169:INFO:choose_better activated
+2025-05-14 18:09:04,171:INFO:SubProcess create_model() called ==================================
+2025-05-14 18:09:04,171:INFO:Initializing create_model()
+2025-05-14 18:09:04,171:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=False, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-05-14 18:09:04,171:INFO:Checking exceptions
+2025-05-14 18:09:04,172:INFO:Importing libraries
+2025-05-14 18:09:04,172:INFO:Copying training dataset
+2025-05-14 18:09:04,173:INFO:Defining folds
+2025-05-14 18:09:04,173:INFO:Declaring metric variables
+2025-05-14 18:09:04,173:INFO:Importing untrained model
+2025-05-14 18:09:04,173:INFO:Declaring custom model
+2025-05-14 18:09:04,173:INFO:Random Forest Classifier Imported successfully
+2025-05-14 18:09:04,173:INFO:Starting cross validation
+2025-05-14 18:09:04,174:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2025-05-14 18:09:04,312:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:04,316:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:04,320:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:04,321:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:04,321:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:04,321:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:04,322:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:04,322:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:04,325:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:04,333:INFO:Calculating mean and std
+2025-05-14 18:09:04,333:INFO:Creating metrics dataframe
+2025-05-14 18:09:04,334:INFO:Finalizing model
+2025-05-14 18:09:04,408:INFO:Uploading results into container
+2025-05-14 18:09:04,409:INFO:Uploading model into container now
+2025-05-14 18:09:04,409:INFO:_master_model_container: 17
+2025-05-14 18:09:04,409:INFO:_display_container: 5
+2025-05-14 18:09:04,409:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False)
+2025-05-14 18:09:04,409:INFO:create_model() successfully completed......................................
+2025-05-14 18:09:04,472:INFO:SubProcess create_model() end ==================================
+2025-05-14 18:09:04,473:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False) result for Accuracy is 0.8191
+2025-05-14 18:09:04,473:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight={},
+                       criterion='entropy', max_depth=9, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0, min_samples_leaf=6,
+                       min_samples_split=10, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=230, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False) result for Accuracy is 0.8291
+2025-05-14 18:09:04,473:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight={},
+                       criterion='entropy', max_depth=9, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0, min_samples_leaf=6,
+                       min_samples_split=10, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=230, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False) is best model
+2025-05-14 18:09:04,473:INFO:choose_better completed
+2025-05-14 18:09:04,478:INFO:_master_model_container: 17
+2025-05-14 18:09:04,478:INFO:_display_container: 4
+2025-05-14 18:09:04,478:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight={},
+                       criterion='entropy', max_depth=9, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0, min_samples_leaf=6,
+                       min_samples_split=10, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=230, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False)
+2025-05-14 18:09:04,478:INFO:tune_model() successfully completed......................................
+2025-05-14 18:09:19,952:INFO:Initializing evaluate_model()
+2025-05-14 18:09:19,952:INFO:evaluate_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight={},
+                       criterion='entropy', max_depth=9, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0, min_samples_leaf=6,
+                       min_samples_split=10, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=230, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False), fold=None, fit_kwargs=None, plot_kwargs=None, feature_name=None, groups=None)
+2025-05-14 18:09:19,956:INFO:Initializing plot_model()
+2025-05-14 18:09:19,956:INFO:plot_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight={},
+                       criterion='entropy', max_depth=9, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0, min_samples_leaf=6,
+                       min_samples_split=10, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=230, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False), plot=pipeline, scale=1, save=False, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), fit_kwargs={}, plot_kwargs=None, groups=None, feature_name=None, label=False, verbose=False, system=True, display=None, display_format=None)
+2025-05-14 18:09:19,956:INFO:Checking exceptions
+2025-05-14 18:09:19,977:INFO:Preloading libraries
+2025-05-14 18:09:19,983:INFO:Copying training dataset
+2025-05-14 18:09:19,983:INFO:Plot type: pipeline
+2025-05-14 18:09:20,549:INFO:Visual Rendered Successfully
+2025-05-14 18:09:20,616:INFO:plot_model() successfully completed......................................
+2025-05-14 18:09:31,172:INFO:Initializing predict_model()
+2025-05-14 18:09:31,172:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000240BC6955D0>, estimator=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight={},
+                       criterion='entropy', max_depth=9, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0, min_samples_leaf=6,
+                       min_samples_split=10, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=230, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000240BCA16480>)
+2025-05-14 18:09:31,172:INFO:Checking exceptions
+2025-05-14 18:09:31,172:INFO:Preloading libraries
+2025-05-14 18:09:31,248:WARNING:c:\Users\Brangovich\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+2025-05-14 18:09:43,527:INFO:Initializing save_model()
+2025-05-14 18:09:43,527:INFO:save_model(model=RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight={},
+                       criterion='entropy', max_depth=9, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0, min_samples_leaf=6,
+                       min_samples_split=10, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=230, n_jobs=-1,
+                       oob_score=False, random_state=42, verbose=0,
+                       warm_start=False), model_name=modelo_default_final, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\BRANGO~1\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['edad', 'ingresos_mensuales',
+                                             'nro_creditos_previos',
+                                             'cuota_vs_ingreso',
+                                             'vehiculo_propio'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_value...
+                                    include=['estado_civil',
+                                             'historia_credito'],
+                                    transformer=OneHotEncoder(cols=['estado_civil',
+                                                                    'historia_credito'],
+                                                              drop_invariant=False,
+                                                              handle_missing='return_nan',
+                                                              handle_unknown='value',
+                                                              return_df=True,
+                                                              use_cat_names=True,
+                                                              verbose=0))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2025-05-14 18:09:43,527:INFO:Adding model into prep_pipe
+2025-05-14 18:09:43,553:INFO:modelo_default_final.pkl saved in current working directory
+2025-05-14 18:09:43,556:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['edad', 'ingresos_mensuales',
+                                             'nro_creditos_previos',
+                                             'cuota_vs_ingreso',
+                                             'vehiculo_propio'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_impu...
+                 RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                        class_weight={}, criterion='entropy',
+                                        max_depth=9, max_features='sqrt',
+                                        max_leaf_nodes=None, max_samples=None,
+                                        min_impurity_decrease=0,
+                                        min_samples_leaf=6,
+                                        min_samples_split=10,
+                                        min_weight_fraction_leaf=0.0,
+                                        monotonic_cst=None, n_estimators=230,
+                                        n_jobs=-1, oob_score=False,
+                                        random_state=42, verbose=0,
+                                        warm_start=False))],
+         verbose=False)
+2025-05-14 18:09:43,556:INFO:save_model() successfully completed......................................
